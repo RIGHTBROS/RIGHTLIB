@@ -22,21 +22,40 @@
             height: auto !important;
         }
 
-        .rb-wrapper {
+
+        .rb-wrapper-brand {
             width: 100% !important;
-            height: 400px !important;
+            height: 200px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        a.rb-button {
-            width: 250px;
-            height: 100px;
+        .rb-wrapper {
+            width: 100% !important;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .rb-button {
+            width: auto;
+            margin: 10px 5px !important;
+            height: 50px;
             box-shadow: 3px 4px 5px rbga(0, 0, 0, 0.35);
             text-decoration: none;
             font-size: 22px;
-            padding: 10px 20px;
+            text-align: center;
+            padding: 10px 20px !important;
             border-radius: 2px;
             color: #E7E9BB;
         }
@@ -76,7 +95,6 @@
             outline: 0;
             box-shadow: none;
             border: 0 !important;
-            background: #2c3e50;
             background-image: none;
         }
 
@@ -92,15 +110,14 @@
             width: 20em;
             height: 3em;
             line-height: 3;
-            background: #2c3e50;
             overflow: hidden;
             border-radius: .25em;
         }
 
         select {
             flex: 1;
+            text-align: center;
             padding: 0 .5em;
-            color: #fff;
             cursor: pointer;
         }
 
@@ -111,33 +128,26 @@
             top: 0;
             right: 0;
             padding: 0 1em;
-            background: #34495e;
             cursor: pointer;
             pointer-events: none;
             -webkit-transition: .25s all ease;
             -o-transition: .25s all ease;
             transition: .25s all ease;
         }
-
-        /* Transition */
-        .select:hover::after {
-            color: #f39c12;
-        }
     </style>
 
-    <div class="rb-wrapper">
-        <img src="./assets/Simplicity Unleashed.png" alt="RIGHTLIB" width="50%" style="display: block;">
+    <div class="rb-wrapper-brand">
+        <img src="./assets/Simplicity Unleashed.png" alt="RIGHTLIB" width="30%" style="display: block;">
     </div>
-    <center><a href="https://www.rightbros.co/" download="true" class="rb-button rb-mojito" target="_blank"
-            style="margin-bottom: 30px!important;">RIGHTBROS</a>
-    </center>
-    <center><a href="/rightlib/css/gradient.min.css" download="true" class="rb-button rb-cherry"
-            target="_blank">Download Latest Version</a>
-    </center>
+    <div class="button-wrapper">
+        <a href="https://www.rightbros.co/" download="true" class="rb-button rb-aubergine" target="_blank">RIGHTBROS</a>
+        <a href="/rightlib/css/gradient.min.css" download="true" class="rb-button rb-cherry" target="_blank">Download
+            Latest Version</a>
+    </div>
 
 
-    <div class="rb-wrapper" style="padding-top: 50px!important;">
-        <form>
+    <div class="rb-wrapper" style="margin-top: -150px!important">
+        <form class="select">
             <select name="gradient" id="gradient-select" class="rb-electric-violet">
                 <option>rb-electric-violet</option>
                 <option>rb-kashmir</option>
