@@ -19,7 +19,7 @@
         }
 
         body {
-            height: auto!important;
+            height: auto !important;
         }
 
         .rb-wrapper {
@@ -33,7 +33,7 @@
         a.rb-button {
             width: 250px;
             height: 100px;
-            box-shadow: 3px 4px 5px rbga(0,0,0,0.35);
+            box-shadow: 3px 4px 5px rbga(0, 0, 0, 0.35);
             text-decoration: none;
             font-size: 22px;
             padding: 10px 20px;
@@ -64,26 +64,81 @@
         }
 
         .view-division {
-            margin-top: -150px!important;
+            margin-top: -150px !important;
+        }
+
+        /* Reset Select */
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            outline: 0;
+            box-shadow: none;
+            border: 0 !important;
+            background: #2c3e50;
+            background-image: none;
+        }
+
+        /* Remove IE arrow */
+        select::-ms-expand {
+            display: none;
+        }
+
+        /* Custom Select */
+        .select {
+            position: relative;
+            display: flex;
+            width: 20em;
+            height: 3em;
+            line-height: 3;
+            background: #2c3e50;
+            overflow: hidden;
+            border-radius: .25em;
         }
 
         select {
-            width: 300px!important;
+            flex: 1;
+            padding: 0 .5em;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Arrow */
+        .select::after {
+            content: '\25BC';
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0 1em;
+            background: #34495e;
+            cursor: pointer;
+            pointer-events: none;
+            -webkit-transition: .25s all ease;
+            -o-transition: .25s all ease;
+            transition: .25s all ease;
+        }
+
+        /* Transition */
+        .select:hover::after {
+            color: #f39c12;
         }
     </style>
 
     <div class="rb-wrapper">
         <img src="./assets/Simplicity Unleashed.png" alt="RIGHTLIB" width="50%" style="display: block;">
     </div>
-    <center><a href="https://www.rightbros.co/" download="true" class="rb-button rb-mojito" target="_blank" style="margin-bottom: 30px!important;">RIGHTBROS</a>
+    <center><a href="https://www.rightbros.co/" download="true" class="rb-button rb-mojito" target="_blank"
+            style="margin-bottom: 30px!important;">RIGHTBROS</a>
     </center>
-    <center><a href="/rightlib/css/gradient.min.css" download="true" class="rb-button rb-cherry" target="_blank">Download Latest Version</a>
+    <center><a href="/rightlib/css/gradient.min.css" download="true" class="rb-button rb-cherry"
+            target="_blank">Download Latest Version</a>
     </center>
 
 
     <div class="rb-wrapper" style="padding-top: 50px!important;">
         <form>
-            <select name="gradient" id="gradient-select" class="gradient-selector">
+            <select name="gradient" id="gradient-select" class="rb-electric-violet">
                 <option>rb-electric-violet</option>
                 <option>rb-kashmir</option>
                 <option>rb-steel-gray</option>
@@ -134,7 +189,7 @@
         </form>
     </div>
 
-    <div class="rb-wrapper view-division rb-horizon">
+    <div class="rb-wrapper view-division rb-electric-violet">
         <h1 class="inner-text">rb-horizon</h1>
     </div>
 
