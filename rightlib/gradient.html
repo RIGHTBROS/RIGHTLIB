@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/gradient.min.css">
 </head>
 
-<body>
+<body class="rb-electric-violet">
 
     <style>
         * {
@@ -19,31 +19,71 @@
         }
 
         body {
-            height: auto!important;
+            height: auto !important;
         }
 
-        .rb-wrapper {
+
+        .rb-wrapper-brand {
             width: 100% !important;
-            height: 400px !important;
+            height: 200px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        a.rb-button {
-            width: 250px;
-            height: 100px;
-            box-shadow: 3px 4px 5px rbga(0,0,0,0.35);
+        .rb-wrapper-brand img {
+            height: 50%!important;
+        }
+
+
+        .rightbros {
+            width: 100% !important;
+            height: 200px;
+            padding: 0;
+            margin: 0!important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rightbros img {
+            height: 50%!important;
+            background: #fff;
+            border-radius: 3px;
+        }
+
+        .rb-wrapper {
+            width: 100% !important;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .rb-button {
+            width: auto;
+            margin: 10px 5px !important;
+            height: 50px;
+            box-shadow: 3px 4px 5px rbga(0, 0, 0, 0.35);
             text-decoration: none;
             font-size: 22px;
-            padding: 10px 20px;
+            text-align: center;
+            padding: 10px 20px !important;
             border-radius: 2px;
             color: #E7E9BB;
         }
 
         .rb-wrapper h1 {
             text-align: center;
-            font-size: 64px;
+            font-size: 3em;
             font-weight: bolder;
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -51,7 +91,7 @@
 
         .rb-wrapper h2 {
             text-align: center;
-            font-size: 42px;
+            font-size: 2em;
             font-weight: bold;
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -62,79 +102,136 @@
             font-size: 26px;
             font-family: Arial, Helvetica, sans-serif;
         }
+
+        .view-division {
+            margin-top: -150px !important;
+        }
+
+        /* Reset Select */
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            outline: 0;
+            box-shadow: none;
+            border: 0 !important;
+            background-image: none;
+        }
+
+        /* Remove IE arrow */
+        select::-ms-expand {
+            display: none;
+        }
+
+        /* Custom Select */
+        .select {
+            position: relative;
+            display: flex;
+            width: 20em;
+            height: 3em;
+            line-height: 3;
+            overflow: hidden;
+            border-radius: .25em;
+        }
+
+        select {
+            flex: 1;
+            text-align: center;
+            padding: 0 .5em;
+            border: 3px solid #fff!important;
+            cursor: pointer;
+        }
+
+        /* Arrow */
+        .select::after {
+            content: '\25BC';
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0 1em;
+            cursor: pointer;
+            pointer-events: none;
+            -webkit-transition: .25s all ease;
+            -o-transition: .25s all ease;
+            transition: .25s all ease;
+        }
     </style>
 
-    <div class="rb-wrapper">
-        <img src="./assets/Simplicity Unleashed.png" alt="RIGHTLIB" width="50%" style="display: block;">
+    <div class="rb-wrapper-brand">
+        <img src="./assets/Simplicity Unleashed.png" alt="RIGHTLIB" style="display: block;">
     </div>
-    <center><a href="https://www.rightbros.co/" download="true" class="rb-button rb-mojito" target="_blank" style="margin-bottom: 30px!important;">RIGHTBROS</a>
-    </center>
-    <center><a href="/rightlib/css/gradient.min.css" download="true" class="rb-button rb-cherry" target="_blank">Download Latest Version</a>
-    </center>
-    <div class="rb-wrapper rb-electric-violet">
-        <h2>rb-electric-violet</h2>
-    </div>
-    <div class="rb-wrapper rb-kashmir">
-        <h2>rb-kashmir</h2>
-    </div>
-    <div class="rb-wrapper rb-steel-gray">
-        <h2>rb-steel-gray</h2>
-    </div>
-    <div class="rb-wrapper rb-mirage">
-        <h2>rb-mirage</h2>
-    </div>
-    <div class="rb-wrapper rb-juicy-orange">
-        <h2>rb-juicy-orange</h2>
+    <div class="button-wrapper">
+        <a href="https://www.rightbros.co/" class="rb-button rb-aubergine" target="_blank">RIGHTBROS</a>
+        <a href="/rightlib/css/gradient.min.css" download="true" class="rb-button rb-cherry" target="_blank">Download
+            Latest Version</a>
     </div>
 
-    <div class="rb-wrapper rb-mojito">
-        <h2>rb-mojito</h2>
+    <div class="rightbros">
+        <h2>By</h2>
+        <img src="./assets/logo.png" alt="RIGHTLIB" style="display: block; height: 35%!important;">
     </div>
-    <div class="rb-wrapper rb-cherry">
-        <h2>rb-cherry</h2>
+
+
+    <div class="rb-wrapper" style="margin-top: -150px!important">
+        <form class="select">
+            <select name="gradient" id="gradient-select" class="rb-electric-violet">
+                <option selected>rb-electric-violet</option>
+                <option>rb-kashmir</option>
+                <option>rb-steel-gray</option>
+                <option value="">rb-mirage</option>
+                <option value="">rb-juicy-orange</option>
+                <option value="">rb-mojito</option>
+                <option value="">rb-cherry</option>
+                <option value="">rb-pinky</option>
+                <option value="">rb-sea-weed</option>
+                <option value="">rb-stripe</option>
+                <option value="">rb-purple-paradise</option>
+                <option value="">rb-sunrise</option>
+                <option value="">rb-aqua-marine</option>
+                <option value="">rb-aubergine</option>
+                <option value="">rb-bloody-mary</option>
+                <option value="">rb-mango-pulp</option>
+                <option value="">rb-frozen</option>
+                <option value="">rb-rose-water</option>
+                <option value="">rb-horizon</option>
+                <option value="">rb-monte-carlo</option>
+                <option value="">rb-lemon-twist</option>
+                <option value="">rb-playing-with-reds</option>
+                <option value="">rb-harmonic-energy</option>
+                <option value="">rb-cool-brown</option>
+                <option value="">rb-youtube</option>
+                <option value="">rb-noon-to-dusk</option>
+                <option value="">rb-hazel</option>
+                <option value="">rb-nimvelo</option>
+                <option value="">rb-sea-blue</option>
+                <option value="">rb-blooker20</option>
+                <option value="">rb-sexy-blue</option>
+                <option value="">rb-purple-love</option>
+                <option value="">rb-dimigo</option>
+                <option value="">rb-skyline</option>
+                <option value="">rb-sel</option>
+                <option value="">rb-sky</option>
+                <option value="">rb-petrol</option>
+                <option value="">rb-anamnisar</option>
+                <option value="">rb-copper</option>
+                <option value="">rb-royal-blue-petrol</option>
+                <option value="">rb-royal-blue</option>
+                <option value="">rb-windy</option>
+                <option value="">rb-rea</option>
+                <option value="">rb-bupe</option>
+                <option value="">rb-mango</option>
+                <option value="">rb-reaqua</option>
+            </select>
+        </form>
     </div>
-    <div class="rb-wrapper rb-pinky">
-        <h2>rb-pinky</h2>
+
+    <div class="rb-wrapper view-division rb-electric-violet">
+        <h1 class="inner-text">rb-electric-violet</h1>
     </div>
-    <div class="rb-wrapper rb-sea-weed">
-        <h2>rb-sea-weed</h2>
-    </div>
-    <div class="rb-wrapper rb-stripe">
-        <h2>rb-stripe</h2>
-    </div>
-    <div class="rb-wrapper rb-purple-paradise">
-        <h2>rb-purple-paradise</h2>
-    </div>
-    <div class="rb-wrapper rb-sunrise">
-        <h2>rb-sunrise</h2>
-    </div>
-    <div class="rb-wrapper rb-aqua-marine">
-        <h2>rb-aqua-marine</h2>
-    </div>
-    <div class="rb-wrapper rb-aubergine">
-        <h2>rb-aubergine</h2>
-    </div>
-    <div class="rb-wrapper rb-bloody-mary">
-        <h2>rb-bloody-mary</h2>
-    </div>
-    <div class="rb-wrapper rb-mango-pulp">
-        <h2>rb-mango-pulp</h2>
-    </div>
-    <div class="rb-wrapper rb-frozen">
-        <h2>rb-frozen</h2>
-    </div>
-    <div class="rb-wrapper rb-rose-water">
-        <h2>rb-rose-water</h2>
-    </div>
-    <div class="rb-wrapper rb-horizon">
-        <h2>rb-horizon</h2>
-    </div>
-    <div class="rb-wrapper rb-monte-carlo">
-        <h2>rb-monte-carlo</h2>
-    </div>
-    <div class="rb-wrapper rb-lemon-twist">
-        <h2>rb-lemon-twist</h2>
-    </div>
+
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>
